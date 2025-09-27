@@ -1,27 +1,16 @@
-// enumes in typescripten
-enum Direction {
-    Up,
-    Down,
-    Left,
-    Right
+function identity<T>(value: T): T {
+  return value;
 }
 
-const dir: Direction = Direction.Up;
-console.log(dir);
+identity<number>(10);    // T = number
+identity<string>("TS");  // T = string
 
 
 
-
-// example two
-enum Role { Admin, User, Guest }
-
-const roles: Role[] = [Role.Admin, Role.User, Role.Guest];
-if (roles.includes(Role.Admin)) {
-    console.log("Admin role is present");
-    if(roles[0] === Role.Admin){
-        console.log("the first role is Admin");
-    }
+// generic with function 
+function wrapInArray<T>(item: T): T[] {
+  return [item];
 }
-else{
-    console.log("there is not Admin role");
-}
+
+const numbers = wrapInArray(5);       // type: number[]
+const words = wrapInArray("hello");   // type: string[]
