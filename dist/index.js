@@ -1,15 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function displayProduct(product) {
-    // console.log(product);
-    console.log('====================================');
-    console.log(product.name);
-    console.log(product.id);
-    console.log(product.price);
-    console.log('====================================');
+const student = {
+    name: "surafel",
+    age: 23,
+    email: "sura@gmail.com"
+};
+function Student(student) {
+    return student;
 }
-const pr = displayProduct({ id: 1, name: "Laptop", price: 999.99 });
+const result = Student(student);
 console.log('====================================');
-console.log(pr);
+console.log(` my name is ${result.name}`);
+console.log(` i 'm ${result.age} years old`);
+console.log(`my email addrese is ${result.email}`);
 console.log('====================================');
 //# sourceMappingURL=index.js.map

@@ -1,18 +1,21 @@
-interface ProductProps {
-  id: number;
-  name: string;
-  price?: number; // optional
+// type alice in typescript 
+// types in typescrippt --- IGNORE ---
+type studentprops ={
+    name: string;
+    age: number;
+    email? : string;
 }
-
-function displayProduct(product: ProductProps): void {
-    // console.log(product);
-    console.log('====================================');
-    console.log(product.name);
-    console.log(product.id);
-    console.log(product.price);
-    console.log('====================================');
+const student={
+    name : "surafel",
+    age:23,
+    email: "sura@gmail.com"
 }
-const pr=displayProduct({ id: 1, name: "Laptop", price: 999.99 })
+function Student(student:studentprops){
+   return student
+}
+const  result =Student(student)
 console.log('====================================');
-console.log(pr);
+console.log(` my name is ${result.name}`);
+console.log(` i 'm ${result.age} years old`);
+console.log(`my email addrese is ${result.email}`);
 console.log('====================================');
