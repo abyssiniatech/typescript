@@ -1,16 +1,6 @@
-function identity<T>(value: T): T {
-  return value;
+// never type in typescript
+
+function errorFunc(message: string,code:number): never {
+    throw new Error(`Error ${code}: ${message}`);
 }
-
-identity<number>(10);    // T = number
-identity<string>("TS");  // T = string
-
-
-
-// generic with function 
-function wrapInArray<T>(item: T): T[] {
-  return [item];
-}
-
-const numbers = wrapInArray(5);       // type: number[]
-const words = wrapInArray("hello");   // type: string[]
+errorFunc("This is an error",500);
