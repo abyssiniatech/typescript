@@ -1,12 +1,37 @@
 "use strict";
-function identity(value) {
-    return value;
+function generics(value) {
+    return (value);
 }
-identity(10); // T = number
-identity("TS"); // T = string
-// generic with function 
-function wrapInArray(item) {
-    return [item];
+let output = generics(123);
+console.log('====================================');
+console.log(output);
+console.log('====================================');
+// object generics 
+function objectGenerics(obj) {
+    return (obj);
 }
-const numbers = wrapInArray(5); // type: number[]
-const words = wrapInArray("hello"); // type: string[]
+let objOutput = objectGenerics({ name: 'John', age: 30 });
+console.log('====================================');
+console.log(objOutput.name);
+console.log(objOutput.age);
+console.log('====================================');
+// generics in array 
+function arrayGenerics(arr) {
+    return (arr);
+}
+const outputArr = arrayGenerics([1, 2, 3, 4, 5]);
+console.log('====================================');
+console.log(outputArr);
+console.log('====================================');
+// simple array generics 
+function genArr(arr) {
+    return arr;
+}
+const val = genArr([1, 2]);
+// simple object generics
+function objgen(obj) {
+    return obj;
+}
+const objval = objgen({ name: 'John', age: 30 });
+console.log(objval.name);
+console.log(objval.age);
