@@ -1,6 +1,18 @@
-// function  in typescript
-// function in typescript with type annotations
-function greet(name: string,age:number) {
-  return `Hello,  my name is  ${name} and i am ${age} years old`;
+interface ProductProps {
+  id: number;
+  name: string;
+  price?: number; // optional
 }
-console.log(greet("Alice",12));
+
+function displayProduct(product: ProductProps): void {
+    // console.log(product);
+    console.log('====================================');
+    console.log(product.name);
+    console.log(product.id);
+    console.log(product.price);
+    console.log('====================================');
+}
+const pr=displayProduct({ id: 1, name: "Laptop", price: 999.99 })
+console.log('====================================');
+console.log(pr);
+console.log('====================================');
