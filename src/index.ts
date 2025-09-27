@@ -1,25 +1,27 @@
-// union in typscript 
-// union type in typescript is you set two probablity in typescript
-// example
+// enumes in typescripten
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right
+}
 
-const id: number | string =12
-const name: string = "sura2015"
-type Status = "success" | "error" | "loading";
+const dir: Direction = Direction.Up;
+console.log(dir);
 
 
-// check the status in the function 
-function chickStataus(Status:string){
-    if(Status === "success"){
-        return ("success")
-    }
-    else if(Status === "error"){
-        return "error"
-    }
-    else{
-        return "loading"
+
+
+// example two
+enum Role { Admin, User, Guest }
+
+const roles: Role[] = [Role.Admin, Role.User, Role.Guest];
+if (roles.includes(Role.Admin)) {
+    console.log("Admin role is present");
+    if(roles[0] === Role.Admin){
+        console.log("the first role is Admin");
     }
 }
-const statusval =chickStataus("error")
-console.log('====================================');
-console.log(statusval);
-console.log('====================================');
+else{
+    console.log("there is not Admin role");
+}
