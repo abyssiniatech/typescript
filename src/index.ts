@@ -1,14 +1,29 @@
-// array types in typescrippt
-const numbers: number[] = [1, 2, 3, 4, 5];
-const frainds: string[] = ['Alice', 'Bob', 'Charlie'];
-const mixed: (number | string)[] = [1, 'two', 3, 'four'];
-const mixed2: (number | string)[] = [1, 'two', 3, 'four'];
-const num: string[] = [];
-num.push("one");
-console.log(num)
-// tupple types intypescript
-const tuple: [number, string, boolean] = [1, 'Hello', true];
+//object types in ts
+// declare types
+type informationProps = {
+    name: string,
+    age: number,
+    email: string
+}
 
-// array manuplations
-numbers.push(100);
-console.log(numbers)
+
+const person: informationProps = {
+    name: "surafel",
+    age: 30,
+    email: "sura@gmail.com"
+}
+
+
+
+
+function information(person: informationProps) {
+    return { name: person.name, age: person.age, email: person.email };
+}
+
+const val = information({ name: person.name, age: person.age, email: person.email });
+console.log(val);
+
+
+
+
+export {};
