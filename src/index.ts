@@ -1,4 +1,13 @@
-// tupples in ts
-const person :[string, number, boolean]=["John", 30, true];
+// any type in typescript
+// any type can hold any value and can be reassigned to different types
+let data:any = 42;
+data = "Hello, World!";
+data = true;
+data = { name: "Alice", age: 30 };
+data=null;
+data=undefined;
+data=data;
 
-console.log(person);
+
+
+
