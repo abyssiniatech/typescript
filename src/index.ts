@@ -1,21 +1,25 @@
-// type alice in typescript 
-// types in typescrippt --- IGNORE ---
-type studentprops ={
-    name: string;
-    age: number;
-    email? : string;
+// union in typscript 
+// union type in typescript is you set two probablity in typescript
+// example
+
+const id: number | string =12
+const name: string = "sura2015"
+type Status = "success" | "error" | "loading";
+
+
+// check the status in the function 
+function chickStataus(Status:string){
+    if(Status === "success"){
+        return ("success")
+    }
+    else if(Status === "error"){
+        return "error"
+    }
+    else{
+        return "loading"
+    }
 }
-const student={
-    name : "surafel",
-    age:23,
-    email: "sura@gmail.com"
-}
-function Student(student:studentprops){
-   return student
-}
-const  result =Student(student)
+const statusval =chickStataus("error")
 console.log('====================================');
-console.log(` my name is ${result.name}`);
-console.log(` i 'm ${result.age} years old`);
-console.log(`my email addrese is ${result.email}`);
+console.log(statusval);
 console.log('====================================');
