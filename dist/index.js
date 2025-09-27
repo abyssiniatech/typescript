@@ -1,10 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// types in typescrippt
-// there are three common types in typescript
-// 1 number type
-let age = 25;
-let price = 19.99;
-const pi = 3.14;
-console.log(age, price, pi);
+// string in typescript
+const message = "Hello, TypeScript!";
+const email = "surafel@gmail.com";
+console.log(message, email);
 //# sourceMappingURL=index.js.map
