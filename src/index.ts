@@ -1,10 +1,14 @@
-// boolean in typescript
+// array types in typescrippt
+const numbers: number[] = [1, 2, 3, 4, 5];
+const frainds: string[] = ['Alice', 'Bob', 'Charlie'];
+const mixed: (number | string)[] = [1, 'two', 3, 'four'];
+const mixed2: (number | string)[] = [1, 'two', 3, 'four'];
+const num: string[] = [];
+num.push("one");
+console.log(num)
+// tupple types intypescript
+const tuple: [number, string, boolean] = [1, 'Hello', true];
 
-
-function greet(name: string, age: number): string | number {
-    return `Hello, my name is  ${name} and i'm  ${age} years old.`;
-}
-let result =greet("surafel mengist", 30);
-console.log('====================================');
-console.log(result);
-console.log('====================================');
+// array manuplations
+numbers.push(100);
+console.log(numbers)
