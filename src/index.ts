@@ -1,6 +1,22 @@
-// never type in typescript
+// class in typescript
+   class  Animal{
+     name:string;
+     age:number;
+     constructor(name:string,age:number){
+         this.name=name;
+         this.age=age;
+     }
+}   
 
-function errorFunc(message: string,code:number): never {
-    throw new Error(`Error ${code}: ${message}`);
+
+
+function printAnimal(animal:Animal):void{
+     console.log(animal.name,animal.age);
 }
-errorFunc("This is an error",500);
+printAnimal(new Animal("cat",3));
+const  animal1 = new Animal("dog",2);
+console.log('====================================');
+console.log(animal1);
+console.log('====================================');
+
+
